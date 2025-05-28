@@ -56,6 +56,8 @@ var (
 func main() {
 	model := simulator.VPX()
 
+	model.ServiceContent.About.Version = "8.0"
+
 	flag.IntVar(&model.Datacenter, "dc", model.Datacenter, "Number of datacenters")
 	flag.IntVar(&model.Cluster, "cluster", model.Cluster, "Number of clusters")
 	flag.IntVar(&model.ClusterHost, "host", model.ClusterHost, "Number of hosts per cluster")
